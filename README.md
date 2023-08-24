@@ -10,6 +10,12 @@ ___
 pip install git+https://github.com/kamilgg/layerzero-scan
 ```
 
+Or install from [PyPI](https://pypi.org/project/layerzero-scan/)::
+
+``` bash
+pip install layerzero-scan==1.0.0
+```
+
 ## Tests
 
 In `bash` test that everything looks OK before proceeding:
