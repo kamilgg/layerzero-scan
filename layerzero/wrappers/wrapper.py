@@ -30,19 +30,19 @@ class MainnetWrapper:
         return self._make_post_request(payload)
 
     def get_message_by_params(
-            self,
-            src_chain_id: int,
-            dst_chain_id: int,
-            src_ua_address: str,
-            dst_ua_address: str,
-            src_ua_nonce: int
+        self,
+        src_chain_id: int,
+        dst_chain_id: int,
+        src_ua_address: str,
+        dst_ua_address: str,
+        src_ua_nonce: int,
     ):
         variables = {
             "srcChainId": src_chain_id,
             "dstChainId": dst_chain_id,
             "srcUaAddress": src_ua_address,
             "dstUaAddress": dst_ua_address,
-            "srcUaNonce": src_ua_nonce
+            "srcUaNonce": src_ua_nonce,
         }
         payload = {
             "operationName": OperationsEnum.GET_MESSAGE_BY_PARAMS,

@@ -1,6 +1,6 @@
 from typing import List
 
-from .json_deserializable import JsonDeserializable
+from layerzero.types.json_deserializable import JsonDeserializable
 
 
 class Message(JsonDeserializable):
@@ -17,7 +17,9 @@ class Message(JsonDeserializable):
         dst_tx_error = obj.get("dstTxError")
         src_tx_hash = obj.get("srcTxHash")
         src_block_hash = obj.get("srcBlockHash")
-        src_block_number = int(obj.get("srcBlockNumber")) if obj.get("srcBlockNumber") else None
+        src_block_number = (
+            int(obj.get("srcBlockNumber")) if obj.get("srcBlockNumber") else None
+        )
         src_ua_nonce = int(obj.get("srcUaNonce")) if obj.get("srcUaNonce") else None
         status = obj.get("status")
         adapter_params = obj.get("adapterParams")
@@ -40,21 +42,21 @@ class Message(JsonDeserializable):
         )
 
     def __init__(
-            self,
-            src_ua_address: str,
-            dst_ua_address: str,
-            updated: int,
-            created: int,
-            src_chain_id: int,
-            dst_chain_id: int,
-            dst_tx_hash: str,
-            dst_tx_error: str,
-            src_tx_hash: str,
-            src_block_hash: str,
-            src_block_number: int,
-            src_ua_nonce: int,
-            status: str,
-            adapter_params: str,
+        self,
+        src_ua_address: str,
+        dst_ua_address: str,
+        updated: int,
+        created: int,
+        src_chain_id: int,
+        dst_chain_id: int,
+        dst_tx_hash: str,
+        dst_tx_error: str,
+        src_tx_hash: str,
+        src_block_hash: str,
+        src_block_number: int,
+        src_ua_nonce: int,
+        status: str,
+        adapter_params: str,
     ):
         self.src_ua_address = src_ua_address
         self.dst_ua_address = dst_ua_address

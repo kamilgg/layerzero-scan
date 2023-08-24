@@ -18,12 +18,12 @@ class LayerZero:
         return MessagesByHash.de_json(raw_json)
 
     def get_message_by_params(
-            self,
-            src_chain_id: int,
-            dst_chain_id: int,
-            src_ua_address: str,
-            dst_ua_address: str,
-            src_ua_nonce: int
+        self,
+        src_chain_id: int,
+        dst_chain_id: int,
+        src_ua_address: str,
+        dst_ua_address: str,
+        src_ua_nonce: int,
     ) -> Union[Message, None]:
         raw_json = self.wrapper.get_message_by_params(
             src_chain_id=src_chain_id,

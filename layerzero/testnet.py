@@ -2,7 +2,7 @@ from typing import Union
 
 from layerzero.wrappers import TestnetWrapper
 from layerzero.enums import EndpointsEnum
-from layerzero.types import LatestMessages, Message, MessagesByHash
+from layerzero.types import Message
 
 
 class LayerZeroTestnet:

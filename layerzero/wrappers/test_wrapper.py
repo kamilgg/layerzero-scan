@@ -19,5 +19,3 @@ class TestnetWrapper:
             return response.json()
         else:
             raise APIError("Error with LayerZero API!")
-
-
