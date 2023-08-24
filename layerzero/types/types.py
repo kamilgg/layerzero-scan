@@ -7,7 +7,6 @@ class Message(JsonDeserializable):
     @classmethod
     def de_json(cls, raw_json):
         obj = cls.check_json(raw_json)
-        print(obj)
         src_ua_address = obj.get("srcUaAddress")
         dst_ua_address = obj.get("dstUaAddress")
         updated = int(obj.get("updated"))
